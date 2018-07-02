@@ -1,0 +1,5 @@
+cd  /root/php
+docker stop  con1
+docker rm con1
+docker  build  -t  hello-world  /root/php/
+docker run -d --name con1   -p 80:80  -v /root/php/src:/var/www/html   hello-world
